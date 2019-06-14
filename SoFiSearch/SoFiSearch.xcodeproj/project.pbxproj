@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78005CB372B391C9C50AFE94 /* Pods_SoFiSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338E5DBADB94633CA515A4EA /* Pods_SoFiSearch.framework */; };
+		AD382DF222B43221001F9339 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD382DF122B43221001F9339 /* SearchController.swift */; };
 		ADAF42D722B42AFC009BE8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF42D622B42AFB009BE8D8 /* AppDelegate.swift */; };
 		ADAF42DC22B42AFC009BE8D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAF42DA22B42AFC009BE8D8 /* Main.storyboard */; };
 		ADAF42DF22B42AFC009BE8D8 /* SoFiSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADAF42DD22B42AFC009BE8D8 /* SoFiSearch.xcdatamodeld */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C6C5D9DA3A62A542EAF5A41 /* Pods-SoFiSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoFiSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoFiSearch/Pods-SoFiSearch.release.xcconfig"; sourceTree = "<group>"; };
+		338E5DBADB94633CA515A4EA /* Pods_SoFiSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoFiSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		677EA6D97E176456D3A39C6D /* Pods-SoFiSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoFiSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoFiSearch/Pods-SoFiSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		AD382DF122B43221001F9339 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		ADAF42D322B42AFB009BE8D8 /* SoFiSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoFiSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAF42D622B42AFB009BE8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAF42DB22B42AFC009BE8D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78005CB372B391C9C50AFE94 /* Pods_SoFiSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450813C39407DF5301CA3090 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				338E5DBADB94633CA515A4EA /* Pods_SoFiSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADAF42CA22B42AFB009BE8D8 = {
 			isa = PBXGroup;
 			children = (
 				ADAF42D522B42AFB009BE8D8 /* SoFiSearch */,
 				ADAF42D422B42AFB009BE8D8 /* Products */,
+				CC2ED85833BEDF7227A4D746 /* Pods */,
+				450813C39407DF5301CA3090 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +110,7 @@
 		ADAF42EE22B42BBA009BE8D8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD382DF122B43221001F9339 /* SearchController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -104,6 +122,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		CC2ED85833BEDF7227A4D746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				677EA6D97E176456D3A39C6D /* Pods-SoFiSearch.debug.xcconfig */,
+				2C6C5D9DA3A62A542EAF5A41 /* Pods-SoFiSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADAF42E822B42B14009BE8D8 /* Build configuration list for PBXNativeTarget "SoFiSearch" */;
 			buildPhases = (
+				93C8F180F036BB96750EFB7F /* [CP] Check Pods Manifest.lock */,
 				ADAF42CF22B42AFB009BE8D8 /* Sources */,
 				ADAF42D022B42AFB009BE8D8 /* Frameworks */,
 				ADAF42D122B42AFB009BE8D8 /* Resources */,
+				84C58DFB94F16A028C9E65AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,12 +199,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84C58DFB94F16A028C9E65AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SoFiSearch/Pods-SoFiSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoFiSearch/Pods-SoFiSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93C8F180F036BB96750EFB7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoFiSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADAF42CF22B42AFB009BE8D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ADAF42D722B42AFC009BE8D8 /* AppDelegate.swift in Sources */,
+				AD382DF222B43221001F9339 /* SearchController.swift in Sources */,
 				ADAF42DF22B42AFC009BE8D8 /* SoFiSearch.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,11 +389,12 @@
 		};
 		ADAF42E922B42B14009BE8D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 677EA6D97E176456D3A39C6D /* Pods-SoFiSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D9CKTK39V;
-				INFOPLIST_FILE = SoFiSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SoFiSearch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,11 +408,12 @@
 		};
 		ADAF42EA22B42B14009BE8D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C6C5D9DA3A62A542EAF5A41 /* Pods-SoFiSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D9CKTK39V;
-				INFOPLIST_FILE = SoFiSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SoFiSearch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
