@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (3.5.1)
+  - Moya (4.5.0):
+    - Moya/Core (= 4.5.0)
+  - Moya/Core (4.5.0):
+    - Alamofire (~> 3.0)
+  - RevealingSplashView (0.6.0)
+  - RxSwift (4.5.0)
+
+DEPENDENCIES:
+  - Moya (~> 4.2)
+  - RevealingSplashView
+  - RxSwift (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - RevealingSplashView
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  Moya: 82813e5bf27564535cd9cdf4e9db61fd220f7f8e
+  RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+
+PODFILE CHECKSUM: 4db673774d6449563978f3d1ed157092487f00f6
+
+COCOAPODS: 1.5.3

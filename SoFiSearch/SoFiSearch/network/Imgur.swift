@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Moya
+//import Moya
 
 public enum Imgur {
     
