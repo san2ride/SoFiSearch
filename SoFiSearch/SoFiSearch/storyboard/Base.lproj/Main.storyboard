@@ -17,12 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-VE-qlI">
+                                <rect key="frame" x="0.0" y="38" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="H9G-7P-Vkl"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="elephant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yN3-oW-oyO">
+                                <rect key="frame" x="0.0" y="97" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.082352941176470587" green="0.75294117647058822" blue="0.94509803921568625" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GVE-1e-u0m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lhO-pH-u14">
+                                <rect key="frame" x="0.0" y="137" width="375" height="450"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yN3-oW-oyO" firstAttribute="trailing" secondItem="EAM-VE-qlI" secondAttribute="trailing" id="3fr-BZ-777"/>
+                            <constraint firstItem="EAM-VE-qlI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4cF-E9-tzp"/>
+                            <constraint firstItem="lhO-pH-u14" firstAttribute="leading" secondItem="yN3-oW-oyO" secondAttribute="leading" id="9Qi-1x-m1r"/>
+                            <constraint firstItem="EAM-VE-qlI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q7T-I2-4jT"/>
+                            <constraint firstItem="EAM-VE-qlI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="Qld-Da-eMU"/>
+                            <constraint firstItem="lhO-pH-u14" firstAttribute="trailing" secondItem="yN3-oW-oyO" secondAttribute="trailing" id="RA2-Es-5mZ"/>
+                            <constraint firstItem="yN3-oW-oyO" firstAttribute="leading" secondItem="EAM-VE-qlI" secondAttribute="leading" id="YkP-da-F2G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lhO-pH-u14" secondAttribute="bottom" constant="80" id="dMI-8N-RxX"/>
+                            <constraint firstItem="yN3-oW-oyO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="lsi-eC-e2o"/>
+                            <constraint firstItem="lhO-pH-u14" firstAttribute="top" secondItem="yN3-oW-oyO" secondAttribute="bottom" id="pzn-1m-mvR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="hSd-M0-KLD" id="eY4-Zd-CJt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="hSd-M0-KLD">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="nKT-uT-3P3"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="YDs-gI-bYS"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="0Db-h1-e5S"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="0fv-gm-nQg"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

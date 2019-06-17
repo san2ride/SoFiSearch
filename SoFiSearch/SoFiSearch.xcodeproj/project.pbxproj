@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		78005CB372B391C9C50AFE94 /* Pods_SoFiSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338E5DBADB94633CA515A4EA /* Pods_SoFiSearch.framework */; };
 		AD382DF222B43221001F9339 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD382DF122B43221001F9339 /* SearchController.swift */; };
+		AD51846922B825C0006999D5 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD51846822B825C0006999D5 /* Imgur.swift */; };
+		AD51846B22B8261A006999D5 /* CodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD51846A22B8261A006999D5 /* CodableResponses.swift */; };
 		ADAF42D722B42AFC009BE8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF42D622B42AFB009BE8D8 /* AppDelegate.swift */; };
 		ADAF42DC22B42AFC009BE8D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAF42DA22B42AFC009BE8D8 /* Main.storyboard */; };
 		ADAF42DF22B42AFC009BE8D8 /* SoFiSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADAF42DD22B42AFC009BE8D8 /* SoFiSearch.xcdatamodeld */; };
@@ -21,6 +23,8 @@
 		338E5DBADB94633CA515A4EA /* Pods_SoFiSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoFiSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		677EA6D97E176456D3A39C6D /* Pods-SoFiSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoFiSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoFiSearch/Pods-SoFiSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		AD382DF122B43221001F9339 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		AD51846822B825C0006999D5 /* Imgur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
+		AD51846A22B8261A006999D5 /* CodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponses.swift; sourceTree = "<group>"; };
 		ADAF42D322B42AFB009BE8D8 /* SoFiSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoFiSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAF42D622B42AFB009BE8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAF42DB22B42AFC009BE8D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD51846722B82548006999D5 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				AD51846822B825C0006999D5 /* Imgur.swift */,
+				AD51846A22B8261A006999D5 /* CodableResponses.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		ADAF42CA22B42AFB009BE8D8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				ADAF42D622B42AFB009BE8D8 /* AppDelegate.swift */,
+				AD51846722B82548006999D5 /* network */,
 				ADAF42EE22B42BBA009BE8D8 /* controller */,
 				ADAF42EF22B42BF3009BE8D8 /* view */,
 				ADAF42ED22B42BA8009BE8D8 /* model */,
@@ -207,11 +221,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SoFiSearch/Pods-SoFiSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -245,6 +267,8 @@
 			files = (
 				ADAF42D722B42AFC009BE8D8 /* AppDelegate.swift in Sources */,
 				AD382DF222B43221001F9339 /* SearchController.swift in Sources */,
+				AD51846B22B8261A006999D5 /* CodableResponses.swift in Sources */,
+				AD51846922B825C0006999D5 /* Imgur.swift in Sources */,
 				ADAF42DF22B42AFC009BE8D8 /* SoFiSearch.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
