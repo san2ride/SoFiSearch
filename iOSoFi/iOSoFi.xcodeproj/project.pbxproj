@@ -14,6 +14,12 @@
 		AD648F6C22B83366006B8A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD648F6A22B83366006B8A05 /* LaunchScreen.storyboard */; };
 		AD648F7622B833DF006B8A05 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD648F7522B833DF006B8A05 /* SearchController.swift */; };
 		ADA40A2D22B838C200EA6218 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA40A2C22B838C200EA6218 /* Imgur.swift */; };
+		ADA867F122B87BD10062ABE0 /* CodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA867F022B87BD10062ABE0 /* CodableResponses.swift */; };
+		ADA867F422B8805D0062ABE0 /* UploadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA867F322B8805D0062ABE0 /* UploadResult.swift */; };
+		ADF3774E22B9341900F9627B /* ImgurViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3774C22B9341900F9627B /* ImgurViewCell.swift */; };
+		ADF3774F22B9341900F9627B /* ImgurViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF3774D22B9341900F9627B /* ImgurViewCell.xib */; };
+		ADF3775122B93E8400F9627B /* ImgurResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3775022B93E8400F9627B /* ImgurResultController.swift */; };
+		ADF3775322B9491300F9627B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3775222B9491300F9627B /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		AD648F6D22B83366006B8A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD648F7522B833DF006B8A05 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		ADA40A2C22B838C200EA6218 /* Imgur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
+		ADA867F022B87BD10062ABE0 /* CodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponses.swift; sourceTree = "<group>"; };
+		ADA867F322B8805D0062ABE0 /* UploadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResult.swift; sourceTree = "<group>"; };
+		ADF3774C22B9341900F9627B /* ImgurViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurViewCell.swift; sourceTree = "<group>"; };
+		ADF3774D22B9341900F9627B /* ImgurViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgurViewCell.xib; sourceTree = "<group>"; };
+		ADF3775022B93E8400F9627B /* ImgurResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurResultController.swift; sourceTree = "<group>"; };
+		ADF3775222B9491300F9627B /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		ECA56145CBF6A4C205560E1F /* Pods-iOSoFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSoFi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSoFi/Pods-iOSoFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +85,9 @@
 			children = (
 				AD648F6122B83365006B8A05 /* AppDelegate.swift */,
 				AD648F7722B83432006B8A05 /* Network */,
-				AD648F7522B833DF006B8A05 /* SearchController.swift */,
+				ADF3774B22B933C600F9627B /* controller */,
+				ADF3774A22B933B800F9627B /* view */,
+				ADA867F222B880360062ABE0 /* model */,
 				AD648F7322B833A7006B8A05 /* Storyboard */,
 				AD648F7422B833B3006B8A05 /* Supporting Files */,
 			);
@@ -102,8 +116,36 @@
 			isa = PBXGroup;
 			children = (
 				ADA40A2C22B838C200EA6218 /* Imgur.swift */,
+				ADA867F022B87BD10062ABE0 /* CodableResponses.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		ADA867F222B880360062ABE0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ADA867F322B8805D0062ABE0 /* UploadResult.swift */,
+				ADF3775222B9491300F9627B /* Search.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		ADF3774A22B933B800F9627B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				ADF3774D22B9341900F9627B /* ImgurViewCell.xib */,
+				ADF3774C22B9341900F9627B /* ImgurViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		ADF3774B22B933C600F9627B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD648F7522B833DF006B8A05 /* SearchController.swift */,
+				ADF3775022B93E8400F9627B /* ImgurResultController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		E46AC976945CFDACF42156FA /* Pods */ = {
@@ -176,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD648F6C22B83366006B8A05 /* LaunchScreen.storyboard in Resources */,
+				ADF3774F22B9341900F9627B /* ImgurViewCell.xib in Resources */,
 				AD648F6922B83366006B8A05 /* Assets.xcassets in Resources */,
 				AD648F6722B83365006B8A05 /* Main.storyboard in Resources */,
 			);
@@ -236,8 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD648F6222B83365006B8A05 /* AppDelegate.swift in Sources */,
+				ADA867F122B87BD10062ABE0 /* CodableResponses.swift in Sources */,
 				ADA40A2D22B838C200EA6218 /* Imgur.swift in Sources */,
 				AD648F7622B833DF006B8A05 /* SearchController.swift in Sources */,
+				ADA867F422B8805D0062ABE0 /* UploadResult.swift in Sources */,
+				ADF3775322B9491300F9627B /* Search.swift in Sources */,
+				ADF3775122B93E8400F9627B /* ImgurResultController.swift in Sources */,
+				ADF3774E22B9341900F9627B /* ImgurViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

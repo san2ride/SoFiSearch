@@ -10,30 +10,133 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Controller-->
+        <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchController" customModule="iOSoFi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-M5-Vdc">
+                                <rect key="frame" x="0.0" y="116" width="375" height="56"/>
+                                <color key="barTintColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XtT-Bh-aRY">
+                                <rect key="frame" x="0.0" y="172" width="375" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="106" id="uev-Wd-hBK" customClass="ImgurViewCell" customModule="iOSoFi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uev-Wd-hBK" id="nUf-2x-tLN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zLa-cn-FmW">
+                                                    <rect key="frame" x="8" y="8.5" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="PgK-FW-hKB"/>
+                                                        <constraint firstAttribute="width" constant="90" id="pci-Sy-vEL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unicorn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-Fg-8Gj">
+                                                    <rect key="frame" x="106" y="33" width="254" height="40"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                    <color key="textColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zLa-cn-FmW" secondAttribute="bottom" constant="8" id="1Lw-xL-dot"/>
+                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="top" secondItem="nUf-2x-tLN" secondAttribute="topMargin" constant="13" id="AlC-iK-31y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b5G-Fg-8Gj" secondAttribute="trailing" constant="-1" id="CUs-fx-xCx"/>
+                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="centerY" secondItem="zLa-cn-FmW" secondAttribute="centerY" id="HmM-NE-JFa"/>
+                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="leading" secondItem="zLa-cn-FmW" secondAttribute="trailing" constant="8" symbolic="YES" id="Izk-cT-8Hs"/>
+                                                <constraint firstItem="zLa-cn-FmW" firstAttribute="leading" secondItem="nUf-2x-tLN" secondAttribute="leading" constant="8" id="YfC-Og-q1H"/>
+                                                <constraint firstItem="zLa-cn-FmW" firstAttribute="top" secondItem="nUf-2x-tLN" secondAttribute="top" constant="8" id="mWG-VX-9qb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchImageView" destination="zLa-cn-FmW" id="yks-DM-6fh"/>
+                                            <outlet property="searchTitleLabel" destination="b5G-Fg-8Gj" id="xAf-Fm-pvQ"/>
+                                            <segue destination="1zl-Nr-nvo" kind="show" id="dAl-i0-SlZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eOP-M5-Vdc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0oy-4o-s1t"/>
+                            <constraint firstItem="XtT-Bh-aRY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KHR-xK-2ad"/>
+                            <constraint firstItem="eOP-M5-Vdc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pyj-VW-kYb"/>
+                            <constraint firstItem="eOP-M5-Vdc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fc7-gM-mma"/>
+                            <constraint firstItem="XtT-Bh-aRY" firstAttribute="top" secondItem="eOP-M5-Vdc" secondAttribute="bottom" id="gjk-UJ-Jjh"/>
+                            <constraint firstItem="XtT-Bh-aRY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s1G-ws-t3R"/>
+                            <constraint firstItem="XtT-Bh-aRY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vma-4B-1eN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sl3-dC-9m7"/>
+                    <navigationItem key="navigationItem" title="Search" id="Sl3-dC-9m7"/>
+                    <connections>
+                        <outlet property="imgurSearchBar" destination="eOP-M5-Vdc" id="ibq-If-dnu"/>
+                        <outlet property="imgurTableView" destination="XtT-Bh-aRY" id="XQT-kU-DnD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="-269"/>
+            <point key="canvasLocation" x="1040.8" y="-269.41529235382313"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Imgur Result Controller-->
+        <scene sceneID="S5J-QY-tnb">
+            <objects>
+                <viewController id="1zl-Nr-nvo" customClass="ImgurResultController" customModule="iOSoFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ot5-y3-wTW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QDC-fi-kOZ">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QDC-fi-kOZ" firstAttribute="trailing" secondItem="MNh-AH-CYe" secondAttribute="trailing" id="dMC-bs-ssE"/>
+                            <constraint firstItem="QDC-fi-kOZ" firstAttribute="bottom" secondItem="MNh-AH-CYe" secondAttribute="bottom" id="hl1-lR-sp7"/>
+                            <constraint firstItem="QDC-fi-kOZ" firstAttribute="top" secondItem="MNh-AH-CYe" secondAttribute="top" id="iKj-7C-p1q"/>
+                            <constraint firstItem="QDC-fi-kOZ" firstAttribute="leading" secondItem="MNh-AH-CYe" secondAttribute="leading" id="yyx-aC-G8a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MNh-AH-CYe"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgurResultImageView" destination="QDC-fi-kOZ" id="gxO-JB-uH2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNK-TK-3js" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925.5999999999999" y="-266.71664167916043"/>
+        </scene>
+        <!--Imgur Gallery-->
         <scene sceneID="4oz-5E-pVj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p5Z-4p-P0G" sceneMemberID="viewController">
+                <navigationController title="Imgur Gallery" automaticallyAdjustsScrollViewInsets="NO" id="p5Z-4p-P0G" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kp1-w9-J5v">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Kp1-w9-J5v">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="0.0078431372550000003" green="0.0039215686269999999" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
