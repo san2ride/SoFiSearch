@@ -15,7 +15,9 @@ class ImgurViewCell: UITableViewCell {
     @IBOutlet weak var searchImageView: UIImageView!
     @IBOutlet weak var searchTitleLabel: UILabel!
     
-    public func configureCell(_ search: Search) {
-        
-    }
+//    public func configureCell(_ search: Search) {
+//        
+//    }
+    
+    
 }

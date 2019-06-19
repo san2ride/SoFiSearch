@@ -9,5 +9,9 @@
 import Foundation
 
 struct ImgurResponse<T: Codable>: Codable {
-    let data: T
+    let data: ImgurResults<T>
+}
+
+struct ImgurResults<T: Codable>: Codable {
+    let results: [T]
 }

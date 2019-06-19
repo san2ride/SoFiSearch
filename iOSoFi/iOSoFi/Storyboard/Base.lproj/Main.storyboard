@@ -43,8 +43,8 @@
                                                         <constraint firstAttribute="width" constant="90" id="pci-Sy-vEL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unicorn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-Fg-8Gj">
-                                                    <rect key="frame" x="106" y="33" width="254" height="40"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unicorn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-Fg-8Gj">
+                                                    <rect key="frame" x="106" y="24.5" width="255" height="58"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                     <color key="textColor" red="0.08235294118" green="0.75294117650000003" blue="0.94509803920000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -52,11 +52,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="zLa-cn-FmW" secondAttribute="bottom" constant="8" id="1Lw-xL-dot"/>
-                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="top" secondItem="nUf-2x-tLN" secondAttribute="topMargin" constant="13" id="AlC-iK-31y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="b5G-Fg-8Gj" secondAttribute="trailing" constant="-1" id="CUs-fx-xCx"/>
-                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="centerY" secondItem="zLa-cn-FmW" secondAttribute="centerY" id="HmM-NE-JFa"/>
-                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="leading" secondItem="zLa-cn-FmW" secondAttribute="trailing" constant="8" symbolic="YES" id="Izk-cT-8Hs"/>
+                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="centerY" secondItem="zLa-cn-FmW" secondAttribute="centerY" id="Flr-H3-vmP"/>
                                                 <constraint firstItem="zLa-cn-FmW" firstAttribute="leading" secondItem="nUf-2x-tLN" secondAttribute="leading" constant="8" id="YfC-Og-q1H"/>
+                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="top" secondItem="nUf-2x-tLN" secondAttribute="topMargin" constant="13" id="aag-nT-AKB"/>
+                                                <constraint firstItem="b5G-Fg-8Gj" firstAttribute="leading" secondItem="zLa-cn-FmW" secondAttribute="trailing" constant="8" symbolic="YES" id="keu-Qq-L9E"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b5G-Fg-8Gj" secondAttribute="trailing" constant="-1" id="lMs-Ks-hOf"/>
                                                 <constraint firstItem="zLa-cn-FmW" firstAttribute="top" secondItem="nUf-2x-tLN" secondAttribute="top" constant="8" id="mWG-VX-9qb"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -83,8 +83,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Sl3-dC-9m7"/>
                     <connections>
-                        <outlet property="imgurSearchBar" destination="eOP-M5-Vdc" id="ibq-If-dnu"/>
-                        <outlet property="imgurTableView" destination="XtT-Bh-aRY" id="XQT-kU-DnD"/>
+                        <outlet property="imgurSearchBar" destination="eOP-M5-Vdc" id="18P-OM-fk9"/>
+                        <outlet property="imgurTableView" destination="XtT-Bh-aRY" id="Nd5-Wo-EMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
