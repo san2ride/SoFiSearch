@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		34C78017B26117DCC29F2633 /* Pods_iOSoFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF5F8018E45E3E15450FD81 /* Pods_iOSoFi.framework */; };
 		AD24EE3222BA9113001F4AC6 /* ImgurApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24EE3122BA9113001F4AC6 /* ImgurApi.swift */; };
-		AD24EE3422BA9516001F4AC6 /* ImgurService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24EE3322BA9516001F4AC6 /* ImgurService.swift */; };
 		AD648F6222B83365006B8A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD648F6122B83365006B8A05 /* AppDelegate.swift */; };
 		AD648F6722B83365006B8A05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD648F6522B83365006B8A05 /* Main.storyboard */; };
 		AD648F6922B83366006B8A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD648F6822B83366006B8A05 /* Assets.xcassets */; };
 		AD648F6C22B83366006B8A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD648F6A22B83366006B8A05 /* LaunchScreen.storyboard */; };
 		AD648F7622B833DF006B8A05 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD648F7522B833DF006B8A05 /* SearchController.swift */; };
 		ADA867F122B87BD10062ABE0 /* CodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA867F022B87BD10062ABE0 /* CodableResponses.swift */; };
+		ADBA857B22BB397200EEC0DC /* ImgurViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADBA857A22BB397100EEC0DC /* ImgurViewCell.xib */; };
+		ADBA857D22BB3F4000EEC0DC /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBA857C22BB3F4000EEC0DC /* Imgur.swift */; };
 		ADF3774E22B9341900F9627B /* ImgurViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3774C22B9341900F9627B /* ImgurViewCell.swift */; };
 		ADF3775122B93E8400F9627B /* ImgurResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3775022B93E8400F9627B /* ImgurResultController.swift */; };
-		ADF3775322B9491300F9627B /* ImgurRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3775222B9491300F9627B /* ImgurRequest.swift */; };
+		ADF3775322B9491300F9627B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF3775222B9491300F9627B /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3EF5F8018E45E3E15450FD81 /* Pods_iOSoFi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSoFi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB57ABBCC2663D7299C3E5BC /* Pods-iOSoFi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSoFi.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSoFi/Pods-iOSoFi.release.xcconfig"; sourceTree = "<group>"; };
 		AD24EE3122BA9113001F4AC6 /* ImgurApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurApi.swift; sourceTree = "<group>"; };
-		AD24EE3322BA9516001F4AC6 /* ImgurService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurService.swift; sourceTree = "<group>"; };
 		AD648F5E22B83364006B8A05 /* iOSoFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSoFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD648F6122B83365006B8A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD648F6622B83365006B8A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,9 +34,11 @@
 		AD648F6D22B83366006B8A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD648F7522B833DF006B8A05 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		ADA867F022B87BD10062ABE0 /* CodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponses.swift; sourceTree = "<group>"; };
+		ADBA857A22BB397100EEC0DC /* ImgurViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImgurViewCell.xib; sourceTree = "<group>"; };
+		ADBA857C22BB3F4000EEC0DC /* Imgur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
 		ADF3774C22B9341900F9627B /* ImgurViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurViewCell.swift; sourceTree = "<group>"; };
 		ADF3775022B93E8400F9627B /* ImgurResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurResultController.swift; sourceTree = "<group>"; };
-		ADF3775222B9491300F9627B /* ImgurRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurRequest.swift; sourceTree = "<group>"; };
+		ADF3775222B9491300F9627B /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		ECA56145CBF6A4C205560E1F /* Pods-iOSoFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSoFi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSoFi/Pods-iOSoFi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,8 @@
 		AD648F7722B83432006B8A05 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				ADBA857C22BB3F4000EEC0DC /* Imgur.swift */,
+				AD24EE3122BA9113001F4AC6 /* ImgurApi.swift */,
 				ADA867F022B87BD10062ABE0 /* CodableResponses.swift */,
 			);
 			path = Network;
@@ -121,9 +125,7 @@
 		ADA867F222B880360062ABE0 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				ADF3775222B9491300F9627B /* ImgurRequest.swift */,
-				AD24EE3122BA9113001F4AC6 /* ImgurApi.swift */,
-				AD24EE3322BA9516001F4AC6 /* ImgurService.swift */,
+				ADF3775222B9491300F9627B /* Search.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -131,6 +133,7 @@
 		ADF3774A22B933B800F9627B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				ADBA857A22BB397100EEC0DC /* ImgurViewCell.xib */,
 				ADF3774C22B9341900F9627B /* ImgurViewCell.swift */,
 			);
 			path = view;
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD648F6C22B83366006B8A05 /* LaunchScreen.storyboard in Resources */,
+				ADBA857B22BB397200EEC0DC /* ImgurViewCell.xib in Resources */,
 				AD648F6922B83366006B8A05 /* Assets.xcassets in Resources */,
 				AD648F6722B83365006B8A05 /* Main.storyboard in Resources */,
 			);
@@ -278,11 +282,11 @@
 			files = (
 				AD648F6222B83365006B8A05 /* AppDelegate.swift in Sources */,
 				ADA867F122B87BD10062ABE0 /* CodableResponses.swift in Sources */,
+				ADBA857D22BB3F4000EEC0DC /* Imgur.swift in Sources */,
 				AD24EE3222BA9113001F4AC6 /* ImgurApi.swift in Sources */,
 				AD648F7622B833DF006B8A05 /* SearchController.swift in Sources */,
-				ADF3775322B9491300F9627B /* ImgurRequest.swift in Sources */,
+				ADF3775322B9491300F9627B /* Search.swift in Sources */,
 				ADF3775122B93E8400F9627B /* ImgurResultController.swift in Sources */,
-				AD24EE3422BA9516001F4AC6 /* ImgurService.swift in Sources */,
 				ADF3774E22B9341900F9627B /* ImgurViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

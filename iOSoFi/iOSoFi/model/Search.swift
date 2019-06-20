@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ImgurRequest: Codable {
+struct Search: Codable {
     let id: String
     let title: String
     let description: String?

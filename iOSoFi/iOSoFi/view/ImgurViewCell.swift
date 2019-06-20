@@ -9,15 +9,16 @@
 import UIKit
 
 class ImgurViewCell: UITableViewCell {
-    public static let reuseIdentifier = "SearchCell"
+    public static let cellReuseId = "SearchCell"
     
     
     @IBOutlet weak var searchImageView: UIImageView!
     @IBOutlet weak var searchTitleLabel: UILabel!
+}
+
+func imgurCellFactory(_ tableView: UITableView,
+                      _ imgurRequest: Search) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: ImgurViewCell.cellReuseId) as! ImgurViewCell
     
-//    public func configureCell(_ search: Search) {
-//        
-//    }
-    
-    
+    return cell
 }
